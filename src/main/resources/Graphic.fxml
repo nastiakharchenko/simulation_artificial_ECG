@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="895.0" style="-fx-background-color: #fcdba9;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController">
+   <children>
+      <LineChart fx:id="graphic" layoutX="14.0" layoutY="24.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="385.0" AnchorPane.topAnchor="24.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ScrollBar fx:id="amplitudeScrollBar" layoutX="533.0" layoutY="55.0" prefHeight="21.0" prefWidth="215.0" AnchorPane.bottomAnchor="392.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="55.0" />
+      <ScrollBar fx:id="timeScrollBar" layoutX="533.0" layoutY="126.0" prefHeight="21.0" prefWidth="215.0" AnchorPane.bottomAnchor="321.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="126.0" />
+      <ScrollBar fx:id="widthB1ScrollBar" layoutX="533.0" layoutY="186.0" prefHeight="21.0" prefWidth="215.0" />
+      <ScrollBar fx:id="widthB2ScrollBar" layoutX="533.0" layoutY="219.0" prefHeight="21.0" prefWidth="215.0" />
+      <VBox layoutX="806.0" layoutY="51.0" prefHeight="200.0" prefWidth="69.0" spacing="15.0" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="806.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="51.0">
+         <children>
+            <RadioButton fx:id="variableP" mnemonicParsing="false" style="-fx-font-style: #f20707;" text="P" textFill="#f09407">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="variableQ" mnemonicParsing="false" text="Q" textFill="#14e40d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="variableR" mnemonicParsing="false" text="R" textFill="#0ce9f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="variableS" mnemonicParsing="false" text="S" textFill="#0657ee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="variableST" mnemonicParsing="false" text="ST" textFill="#a905e4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="variableT" mnemonicParsing="false" text="T" textFill="#dd1174">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Label layoutX="802.0" layoutY="20.0" prefHeight="25.0" prefWidth="78.0" text="Зубец:" textFill="#073dee" AnchorPane.bottomAnchor="403.0" AnchorPane.leftAnchor="802.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="20.0" text="Амплитуда:" textFill="#073dee" AnchorPane.bottomAnchor="403.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="88.0" text="Время:" textFill="#073dee" AnchorPane.bottomAnchor="335.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="88.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="152.0" prefHeight="33.0" prefWidth="78.0" text="Ширина:" textFill="#073dee" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="533.0" AnchorPane.rightAnchor="284.0" AnchorPane.topAnchor="152.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="537.0" layoutY="251.0" prefHeight="25.0" prefWidth="117.0" text="ЧСС, уд./мин:" textFill="#073dee" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="241.0" AnchorPane.topAnchor="251.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="heartRateSLider" layoutX="537.0" layoutY="282.0" prefHeight="21.0" prefWidth="215.0" />
+      <Label layoutX="29.0" layoutY="16.0" text="мВ" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="850.0" AnchorPane.topAnchor="16.0" />
+      <Label layoutX="508.0" layoutY="402.0" text="С" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="508.0" AnchorPane.rightAnchor="359.0" />
+      <Button layoutX="537.0" layoutY="332.0" mnemonicParsing="false" onAction="#generationClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-color: #ffffff;" text="Генерация" textFill="#073dee" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="332.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
